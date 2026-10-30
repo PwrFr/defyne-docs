@@ -10,6 +10,7 @@
       "version": "0.0.0",
       "dependencies": {
         "@tailwindcss/vite": "^4.3.3",
+        "defyne-icons": "^1.0.2",
         "react": "^19.3.1",
         "react-dom": "^19.3.1",
         "tailwindcss": "^4.3.3",
@@ -286,7 +287,7 @@
 
     "@tailwindcss/oxide-wasm32-wasi/tslib": ["tslib@2.8.1", "", { "bundled": true }, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
-    "defyne-icons/defyne-icons": ["defyne-icons@1.0.2", "", { "peerDependencies": { "react": ">=18.0.0" } }, "sha512-afvsH7QOf1zNhO7hqBgYDfuZFvDtqkkIILURg5dR7FyFZP4nYPfmeTsY+FPImp1ST+0GWHZa0hukNDo/fRG2Ug=="],
+    "docs/defyne-icons": ["defyne-icons@1.0.2", "", { "peerDependencies": { "react": ">=18.0.0" } }, "sha512-afvsH7QOf1zNhO7hqBgYDfuZFvDtqkkIILURg5dR7FyFZP4nYPfmeTsY+FPImp1ST+0GWHZa0hukNDo/fRG2Ug=="],
 
     "@tailwindcss/node/lightningcss/lightningcss-android-arm64": ["lightningcss-android-arm64@1.32.0", "", { "os": "android", "cpu": "arm64" }, "sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg=="],
 
