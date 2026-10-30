@@ -1,0 +1,14 @@
+{
+  "name": "defyne-icons-monorepo",
+  "private": true,
+  "workspaces": [
+    "icons",
+    "docs"
+  ],
+  "scripts": {
+    "build:icons": "bun --filter \"defyne-icons\" build",
+    "dev:docs": "bun --filter docs dev",
+    "build:docs": "bun --filter docs build",
+    "build": "bun run build:icons && bun run build:docs"
+  }
+}
