@@ -1,6 +1,6 @@
 {
   "name": "defyne-icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -25,5 +25,8 @@
     "clean": "rm -rf src dist",
     "build": "bun run clean && bun run generate && bun run build:js && bun run build:types",
     "prepublishOnly": "bun run build"
+  },
+  "dependencies": {
+    "defyne-icons": "^1.0.2"
   }
 }
