@@ -1,12 +1,12 @@
-import * as Icons from "defyne-icons";
+// import * as Icons from "defyne-icons";
 import { useState } from "react";
 
 export default function App() {
   const [search, setSearch] = useState("");
 
-  const filteredIcons = Object.entries(Icons).filter(([name]) =>
-    name.toLowerCase().includes(search.toLowerCase()),
-  );
+  // const filteredIcons = Object.entries(Icons).filter(([name]) =>
+  //   name.toLowerCase().includes(search.toLowerCase()),
+  // );
   return (
     <div className="p-8 flex-1 flex flex-col gap-4">
       <div className="flex justify-between items-center">
@@ -20,12 +20,12 @@ export default function App() {
         />
       </div>
       <div className="flex flex-wrap gap-4">
-        {filteredIcons.map(([name, IconComponent]) => (
+        {/* {filteredIcons.map(([name, IconComponent]) => (
           <div key={name} className="flex flex-col justify-center items-center">
             <IconComponent width={24} height={24} className="stroke-white" />
             <p className="text-sm text-white">{name}</p>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

@@ -3,14 +3,9 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "defyne-icons-monorepo",
-    },
-    "docs": {
       "name": "docs",
-      "version": "0.0.0",
       "dependencies": {
         "@tailwindcss/vite": "^4.3.3",
-        "defyne-icons": "workspace:*",
         "react": "^19.3.1",
         "react-dom": "^19.3.1",
         "tailwindcss": "^4.3.3",
@@ -23,16 +18,6 @@
         "oxlint": "^1.89.0",
         "typescript": "~7.0.2",
         "vite": "^8.3.5",
-      },
-    },
-    "icons": {
-      "name": "defyne-icons",
-      "version": "1.0.2",
-      "dependencies": {
-        "defyne-icons": "^1.0.2",
-      },
-      "peerDependencies": {
-        "react": ">=18.0.0",
       },
     },
   },
@@ -199,11 +184,7 @@
 
     "csstype": ["csstype@3.2.3", "", {}, "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ=="],
 
-    "defyne-icons": ["defyne-icons@workspace:icons"],
-
     "detect-libc": ["detect-libc@2.1.2", "", {}, "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ=="],
-
-    "docs": ["docs@workspace:docs"],
 
     "enhanced-resolve": ["enhanced-resolve@5.26.0", "", { "dependencies": { "graceful-fs": "^4.2.4", "tapable": "^2.3.3" } }, "sha512-9vhedylFonb2YGogzUKX6+Ja72gOJbN1QHAqdrvqLwhdl/QWbKopzoUC9EbQNVsAns/bx/4uyqalrQAoy1IByw=="],
 
