@@ -98,7 +98,9 @@ export default function App() {
               <div className="flex items-center justify-between rounded-b-xl border border-t-0 border-slate-200 bg-slate-900 px-4 py-3 text-left font-mono text-sm text-slate-100 shadow-sm">
                 <code>{installCommands[activePm]} defyne-icons</code>
                 <button
-                  onClick={() => copyToClipboard(installCommands[activePm])}
+                  onClick={() =>
+                    copyToClipboard(installCommands[activePm] + "defyne-icons")
+                  }
                   className="rounded-md border border-slate-700 bg-slate-800 px-2.5 py-1 text-xs font-sans text-slate-300 transition-colors hover:bg-slate-700 hover:text-white"
                 >
                   {copiedInstall ? "Copied!" : "Copy"}
@@ -207,8 +209,12 @@ export default function App() {
                     style={{ stroke: color }}
                   />
                 </div>
-                <span className="mt-3 truncate w-full text-xs font-medium text-slate-600 group-hover:text-indigo-600">
-                  {name}
+                <span
+                  className={`mt-3 truncate w-full text-xs font-medium group-hover:text-indigo-600 ${
+                    copiedName === name ? "text-emerald-600" : "text-slate-600"
+                  }`}
+                >
+                  {copiedName === name ? "Copied!" : name}
                 </span>
               </button>
             ))}
