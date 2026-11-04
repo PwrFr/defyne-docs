@@ -1,5 +1,10 @@
 import { useState, useMemo } from "react";
 import * as Icons from "defyne-icons";
+import pkg from "../package.json";
+import { toast } from "sonner";
+
+// Strip the range prefix (e.g. "^2.0.1" -> "2.0.1").
+const iconsVersion = pkg.dependencies["defyne-icons"].replace(/^[^\d]*/, "");
 
 type PackageManager = "bun" | "npm" | "pnpm" | "yarn";
 
@@ -33,6 +38,7 @@ export default function App() {
   };
 
   const copyToClipboard = (text: string, iconName?: string) => {
+    toast.info(iconName ? `Copied ${iconName}!` : `Copied!`);
     navigator.clipboard.writeText(text);
     if (iconName) {
       setCopiedName(iconName);
@@ -45,28 +51,12 @@ export default function App() {
 
   return (
     <div className="min-h-screen  text-slate-900 antialiased selection:bg-indigo-500 selection:text-white">
-      {/* Toast Notification */}
-      {/* {copiedName && (
-        <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-xl bg-red-900 px-4 py-3 text-sm font-medium text-white shadow-xl transition-all">
-          <svg
-            className="h-4 w-4 text-emerald-400"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <polyline points="20 6 9 17 4 12" />
-          </svg>
-          Copied <code>&lt;{copiedName} /&gt;</code> to clipboard!
-        </div>
-      )} */}
-
       {/* Hero Header */}
       <header>
         <div className="mx-auto max-w-6xl px-4 pt-12 sm:px-6">
           <div className="flex flex-col items-center text-center">
             <span className="rounded-full bg-indigo-50 px-3.5 py-1 text-xs font-semibold tracking-wide text-indigo-600">
-              v1.1.0 • Open Source
+              v{iconsVersion} • Open Source
             </span>
             <h1 className="mt-4 text-4xl font-extrabold tracking-tight sm:text-5xl text-indigo-600">
               Defyne Icons
